@@ -1,0 +1,45 @@
+# 数据文件
+*.npy
+*.pkl
+*.csv
+*.h5
+*.hdf5
+
+# 图片
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# 模型文件
+*.pth
+*.pt
+*.ckpt
+*.pth.tar
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 环境
+.env
+venv/
+env/
+.venv
+
+# 临时文件
+*.tmp
+*.log
+*.bak
