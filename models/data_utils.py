@@ -2,6 +2,10 @@
 """
 Data loading and graph construction utilities.
 Ensures consistent data loading across all experiments.
+
+NOTE: This file provides public data utilities. The full graph
+construction pipeline with proprietary optimization strategies
+is available upon reasonable request for academic collaboration.
 """
 
 import os
@@ -63,6 +67,20 @@ def create_knowledge_graph(features, k=5, sim_threshold=0.7):
 
     edge_index = torch.tensor([edge_src, edge_dst], dtype=torch.long)
     return edge_index
+
+
+def create_ecological_graph(features, k=5, sim_threshold=0.7):
+    """
+    Create ecological knowledge graph (EKG) from feature similarity.
+
+    Core innovation: proprietary feature selection and graph construction
+    strategy for ecological knowledge embedding.
+    Full implementation is proprietary — contact authors for collaboration.
+    """
+    raise NotImplementedError(
+        "Ecological graph construction algorithm is proprietary. "
+        "Please contact the authors for academic collaboration."
+    )
 
 
 def normalize_features(features):

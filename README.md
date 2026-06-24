@@ -4,14 +4,20 @@
 基于分段架构的DEM（数字高程模型）空间泛化研究项目。
 Research on segmented architecture for DEM (Digital Elevation Model) spatial generalization.
 
+> **Note / 注意**: This repository contains datasets, preprocessing scripts, and experiment frameworks.
+> Core model implementations (FusionModel, SoftGatedSegmentedModel) are proprietary and available
+> upon reasonable request for academic collaboration.
+>
+> 本仓库包含数据集、预处理脚本和实验框架。核心模型实现为专有代码，可通过学术合作获取。
+
 ## Project Structure / 项目结构
 
 ```
 eaai/
-├── models/                    # Core model definitions / 核心模型定义
+├── models/                    # Model interfaces / 模型接口
 │   ├── data_utils.py          # Data loading & graph construction / 数据加载与图构建
-│   ├── gnn_models.py          # GNN model variants / GNN模型变体
-│   └── trainer.py             # Training utilities / 训练工具
+│   ├── gnn_models.py          # GNN model interfaces / GNN模型接口
+│   └── trainer.py             # Training interfaces / 训练接口
 │
 ├── experiments/               # Experiment scripts / 实验脚本
 │   ├── exp1_segmentation_ablation.py    # Segmentation ablation / 分段消融
@@ -19,9 +25,7 @@ eaai/
 │   ├── exp3_boundary_robustness.py     # Boundary robustness / 边界鲁棒性
 │   ├── exp4_spatial_generalization.py  # Spatial generalization / 空间泛化
 │   ├── exp5_graph_structure_analysis.py # Graph structure analysis / 图结构分析
-│   ├── strict_statistical_analysis.py  # Statistical analysis / 统计分析
-│   ├── if_paper_complete_experiments_FIXED.py  # Main experiment / 主实验
-│   └── measure_inference_latency.py    # Latency measurement / 延迟测量
+│   └── strict_statistical_analysis.py  # Statistical analysis / 统计分析
 │
 ├── fastgtn_repo/              # FastGTN implementation / FastGTN实现
 │
